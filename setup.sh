@@ -50,6 +50,9 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 # Update the system
 sudo dnf update -y --refresh
 
+# Install development tools
+sudo dnf install -y @development-tools
+
 # Install Visual Studio Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
