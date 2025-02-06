@@ -119,3 +119,6 @@ sudo unzip -d /usr/share/fonts/fira-sans /tmp/fira-sans.zip
 # Install Fira Code font
 wget -O /tmp/fira-code.zip https://www.fontsquirrel.com/fonts/download/fira-code
 sudo unzip -d /usr/share/fonts/fira-code /tmp/fira-code.zip
+
+# Force rebuild font cache
+sudo fc-cache -f
