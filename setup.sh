@@ -8,6 +8,37 @@ echo "Defaults timestamp_timeout = -1" | sudo tee /etc/sudoers.d/timeout >/dev/n
 # Limit DNF to 10 parallel downloads
 echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 
+# Remove unnecessary packages
+sudo dnf remove -y \
+  baobab \
+  firefox* \
+  gnome-abrt \
+  gnome-boxes \
+  gnome-calendar \
+  gnome-characters \
+  gnome-clocks \
+  gnome-color-manager \
+  gnome-connections \
+  gnome-contacts \
+  gnome-disk-utility \
+  gnome-font-viewer \
+  gnome-logs \
+  gnome-maps \
+  gnome-system-monitor \
+  gnome-tour \
+  gnome-weather \
+  ibus-anthy \
+  ibus-hangul \
+  ibus-libpinyin \
+  ibus-m17n \
+  ibus-typing-booster \
+  libreoffice* \
+  mediawriter \
+  rhythmbox \
+  simple-scan \
+  snapshot \
+  yelp
+
 # Enable RPM Fusion repositories
 sudo dnf install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm \
