@@ -106,3 +106,8 @@ sudo flatpak install -y flathub \
 # Enable host file system access for Obsidian and Cryptomator
 sudo flatpak override --filesystem=host md.obsidian.Obsidian
 sudo flatpak override --filesystem=host org.cryptomator.Cryptomator
+
+# Install DNF packages
+sudo dnf install -y \
+  gnome-tweaks \
+  yaru-theme
