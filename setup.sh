@@ -111,3 +111,7 @@ sudo flatpak override --filesystem=host org.cryptomator.Cryptomator
 sudo dnf install -y \
   gnome-tweaks \
   yaru-theme
+
+# Install Fira Sans font
+wget -O /tmp/fira-sans.zip https://www.fontsquirrel.com/fonts/download/fira-sans
+sudo unzip -d /usr/share/fonts/fira-sans /tmp/fira-sans.zip
