@@ -95,3 +95,10 @@ git config --global init.defaultBranch "main"
 
 # Install Chromium
 sudo dnf install -y chromium
+
+# Install Flatpak packages
+sudo flatpak install -y flathub \
+  com.mattjakeman.ExtensionManager \
+  com.spotify.Client \
+  md.obsidian.Obsidian \
+  org.cryptomator.Cryptomator
