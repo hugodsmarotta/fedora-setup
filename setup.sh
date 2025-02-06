@@ -79,3 +79,7 @@ sudo dnf install -y \
 
 # Enable Docker to start on boot
 sudo systemctl enable --now docker
+
+# Enable Docker usage without sudo
+getent group docker >/dev/null || sudo groupadd docker
+sudo gpasswd -a "$USER" docker
