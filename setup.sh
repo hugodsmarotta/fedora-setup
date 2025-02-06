@@ -92,3 +92,6 @@ git config --global user.name "Hugo Marotta"
 git config --global user.email "hugodsmarotta@proton.me"
 git config --global core.editor "code --wait"
 git config --global init.defaultBranch "main"
+
+# Install Chromium
+sudo dnf install -y chromium
