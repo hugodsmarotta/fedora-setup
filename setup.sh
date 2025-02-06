@@ -122,3 +122,6 @@ sudo unzip -d /usr/share/fonts/fira-code /tmp/fira-code.zip
 
 # Force rebuild font cache
 sudo fc-cache -f
+
+# Update the system one last time
+sudo dnf update -y --refresh
