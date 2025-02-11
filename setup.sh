@@ -96,6 +96,9 @@ git config --global init.defaultBranch "main"
 # Install Chromium
 sudo dnf install -y chromium
 
+# Install Mega
+sudo dnf install -y https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm
+
 # Install Flatpak packages
 sudo flatpak install -y flathub \
   com.mattjakeman.ExtensionManager \
