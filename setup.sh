@@ -8,6 +8,9 @@ echo "Defaults timestamp_timeout = -1" | sudo tee /etc/sudoers.d/timeout >/dev/n
 # Limit DNF to 10 parallel downloads
 echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 
+# Create directory for custom scripts
+mkdir -p ~/.bashrc.d
+
 # Remove unnecessary packages
 sudo dnf remove -y \
   baobab \
