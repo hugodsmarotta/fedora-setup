@@ -93,6 +93,12 @@ sudo gpasswd -a "$USER" docker
 # Install Volta
 curl -sS https://get.volta.sh | bash -s -- --skip-setup
 
+# Add Volta to PATH
+cat <<'EOF' >~/.bashrc.d/volta.sh
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+EOF
+
 # Set Git configuration
 git config --global user.name "Hugo Marotta"
 git config --global user.email "hugodsmarotta@proton.me"
