@@ -53,6 +53,9 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 # Update the system
 sudo dnf update -y --refresh
 
+# Switch to full FFmpeg
+sudo dnf swap -y --allowerasing ffmpeg-free ffmpeg
+
 # Install development tools
 sudo dnf install -y @development-tools
 
