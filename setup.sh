@@ -90,6 +90,9 @@ sudo systemctl enable --now docker
 getent group docker >/dev/null || sudo groupadd docker
 sudo gpasswd -a "$USER" docker
 
+# Install Volta
+curl -sS https://get.volta.sh | bash -s -- --skip-setup
+
 # Set Git configuration
 git config --global user.name "Hugo Marotta"
 git config --global user.email "hugodsmarotta@proton.me"
