@@ -20,6 +20,44 @@ echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 # Create directory for custom scripts
 mkdir -p ~/.bashrc.d
 
+# Remove bloatware
+bloatware=()
+
+if [[ "$VARIANT_ID" == "workstation" ]]; then
+  bloatware+=(
+    baobab
+    firefox*
+    gnome-abrt
+    gnome-boxes
+    gnome-calendar
+    gnome-characters
+    gnome-clocks
+    gnome-color-manager
+    gnome-connections
+    gnome-contacts
+    gnome-disk-utility
+    gnome-font-viewer
+    gnome-logs
+    gnome-maps
+    gnome-system-monitor
+    gnome-tour
+    gnome-weather
+    ibus-anthy
+    ibus-hangul
+    ibus-libpinyin
+    ibus-m17n
+    ibus-typing-booster
+    libreoffice*
+    mediawriter
+    rhythmbox
+    simple-scan
+    snapshot
+    yelp
+  )
+fi
+
+[ -z "$bloatware" ] || sudo dnf remove -y "${bloatware[@]}"
+
 # Enable RPM Fusion repositories
 sudo dnf install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm \
