@@ -20,37 +20,6 @@ echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf >/dev/null
 # Create directory for custom scripts
 mkdir -p ~/.bashrc.d
 
-# Remove unnecessary packages
-sudo dnf remove -y \
-  baobab \
-  firefox* \
-  gnome-abrt \
-  gnome-boxes \
-  gnome-calendar \
-  gnome-characters \
-  gnome-clocks \
-  gnome-color-manager \
-  gnome-connections \
-  gnome-contacts \
-  gnome-disk-utility \
-  gnome-font-viewer \
-  gnome-logs \
-  gnome-maps \
-  gnome-system-monitor \
-  gnome-tour \
-  gnome-weather \
-  ibus-anthy \
-  ibus-hangul \
-  ibus-libpinyin \
-  ibus-m17n \
-  ibus-typing-booster \
-  libreoffice* \
-  mediawriter \
-  rhythmbox \
-  simple-scan \
-  snapshot \
-  yelp
-
 # Enable RPM Fusion repositories
 sudo dnf install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm \
@@ -125,7 +94,6 @@ sudo dnf install -y https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_
 
 # Install Flatpak packages
 sudo flatpak install -y flathub \
-  com.mattjakeman.ExtensionManager \
   com.spotify.Client \
   md.obsidian.Obsidian \
   org.cryptomator.Cryptomator
@@ -133,11 +101,6 @@ sudo flatpak install -y flathub \
 # Enable host file system access for Obsidian and Cryptomator
 sudo flatpak override --filesystem=host md.obsidian.Obsidian
 sudo flatpak override --filesystem=host org.cryptomator.Cryptomator
-
-# Install DNF packages
-sudo dnf install -y \
-  gnome-tweaks \
-  yaru-theme
 
 # Install Fira Sans font
 wget -O /tmp/fira-sans.zip https://www.fontsquirrel.com/fonts/download/fira-sans
