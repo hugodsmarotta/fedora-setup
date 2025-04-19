@@ -5,9 +5,9 @@ set -eo pipefail
 # Load OS information
 source /etc/os-release
 
-# Check if the OS is Fedora 41 or higher
-if [[ "$ID" != "fedora" || "$VERSION_ID" -lt 41 ]]; then
-  echo "This script is intended for Fedora 41 or higher."
+# Check if the OS is Fedora 42 or higher
+if [[ "$ID" != "fedora" || "$VERSION_ID" -lt 42 ]]; then
+  echo "This script is intended for Fedora 42 or higher."
   exit 1
 fi
 
