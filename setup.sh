@@ -128,7 +128,7 @@ git config --global init.defaultBranch "main"
 sudo dnf install -y chromium
 
 # Install Mega
-sudo dnf install -y https://mega.nz/linux/repo/Fedora_41/x86_64/megasync-Fedora_41.x86_64.rpm
+sudo dnf install -y https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm
 
 # Install Flatpak packages
 sudo flatpak install -y flathub \
