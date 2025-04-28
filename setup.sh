@@ -92,3 +92,5 @@ sudo flatpak install -y flathub \
   com.spotify.Client \
   md.obsidian.Obsidian \
   org.cryptomator.Cryptomator
+
+sudo flatpak override --filesystem=host md.obsidian.Obsidian
