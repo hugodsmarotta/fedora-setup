@@ -76,3 +76,4 @@ sudo dnf install -y \
   docker-compose-plugin
 
 sudo systemctl enable --now docker
+sudo gpasswd --add "$USER" docker
