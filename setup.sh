@@ -94,3 +94,4 @@ sudo flatpak install -y flathub \
   org.cryptomator.Cryptomator
 
 sudo flatpak override --filesystem=host md.obsidian.Obsidian
+sudo flatpak override --filesystem=host org.cryptomator.Cryptomator
