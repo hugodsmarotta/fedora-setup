@@ -95,3 +95,7 @@ sudo flatpak install -y flathub \
 
 sudo flatpak override --filesystem=host md.obsidian.Obsidian
 sudo flatpak override --filesystem=host org.cryptomator.Cryptomator
+
+sudo dnf install -y \
+  chromium \
+  gnome-tweaks
