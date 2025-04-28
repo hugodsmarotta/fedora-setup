@@ -8,3 +8,5 @@ if [[ "$ID" != 'fedora' || "$VARIANT_ID" != 'workstation' || "$VERSION_ID" < 41 
   echo 'This script is intended for Fedora Workstation 41 or higher.'
   exit 1
 fi
+
+echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
