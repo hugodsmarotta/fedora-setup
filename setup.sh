@@ -82,3 +82,7 @@ git config --global user.name 'Hugo Marotta'
 git config --global user.email 'hugodsmarotta@proton.me'
 git config --global core.editor 'code --wait'
 git config --global init.defaultBranch 'main'
+
+sudo dnf install -y \
+  https://mega.nz/linux/repo/Fedora_"$VERSION_ID"/x86_64/megasync-Fedora_"$VERSION_ID".x86_64.rpm \
+  https://mega.nz/linux/repo/Fedora_"$VERSION_ID"/x86_64/nautilus-megasync-Fedora_"$VERSION_ID".x86_64.rpm
