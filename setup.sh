@@ -98,4 +98,8 @@ sudo flatpak override --filesystem=host org.cryptomator.Cryptomator
 
 sudo dnf install -y \
   chromium \
-  gnome-tweaks
+  gnome-tweaks \
+  fish \
+  fzf \
+  bat \
+  eza
