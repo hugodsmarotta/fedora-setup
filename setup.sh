@@ -103,3 +103,5 @@ sudo dnf install -y \
   fzf \
   bat \
   eza
+
+sh -c "$(curl -sSL https://dub.sh/fish-setup)"
